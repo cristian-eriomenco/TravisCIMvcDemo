@@ -1,2 +1,11 @@
 language: csharp
 solution: TravisCIMvcDemo.sln
+sudo: required
+mono: none
+branches:
+  only:
+    - master
+before_script:
+  - chmod a+x ./build.sh
+script:
+  - ./build.sh
